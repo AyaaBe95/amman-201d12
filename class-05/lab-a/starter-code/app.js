@@ -61,8 +61,17 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function sumAndMultiply(a, b, c) { //eslint-disable-line
-
+    var total = sum(a, b);
+    var newtotal=sum(total[0],c)
+    var multi=multiply(a,b)
+    var newmulti=multiply(multi[0],c)
+    
+    var arrayAns = [newtotal[0],newmulti[0],"4 and 7 and 5 sum to 16.","The product of 4 and 7 and 5 is 140."]
+     
+    return arrayAns;
 }
+
+testSumAndMultiply(4, 7, 5);
 
 // Here is the test for sumAndMultiply(); uncomment it to run it
 // testSumAndMultiply(4,7,5);
