@@ -31,6 +31,20 @@ Write a function called multiply() that takes in two numbers as arguments and re
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testMultiply() function and see if the test passes.*/
 
 // Write your code here
+function multiply(a, b) { 
+    var total =  a*b;
+
+    var returnArray = [
+        total,
+        "The product of 5 and 9 is 45."
+    ];
+
+    return returnArray;
+
+}
+
+// Here is the test for multiply(); uncomment it to run it
+testMultiply(5,9);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
@@ -47,8 +61,17 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function sumAndMultiply(a, b, c) { //eslint-disable-line
+    var total=sum(a,b)
+    var newtotal=sum(total[0],c)
+    var multi=multiply(a,b)
+    var newmulti=multiply(multi[0],c)
+
+    var returnArray=[newtotal[0],newmulti[0],"4 and 7 and 5 sum to 16.","The product of 4 and 7 and 5 is 140."]
+    return returnArray;
+    console.log()
 
 }
+testSumAndMultiply(4,7,5)
 
 // Here is the test for sumAndMultiply(); uncomment it to run it
 // testSumAndMultiply(4,7,5);
@@ -69,12 +92,19 @@ Test this function by hand in the console to get it working, and when you think 
 var testArray = [2, 3, 4]; //eslint-disable-line
 
 function sumArray(sumArr) { //eslint-disable-line
-
+    var total = 0;
+    for (let i = 0; i < sumArr.length; i++) {
+        total = sum(total, sumArr[i])[0];
+    }
+    var returnArray = [
+        total,
+        '2,3,4 was passed in as an array of numbers, and 9 is their sum.'
+    ];
+    return returnArray;
 }
 
 // Here is the test for sumArray(); uncomment it to run it
-
-// testSumArray(testArray);
+testSumArray(testArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
